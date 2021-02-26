@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp.apps.MyappConfig',
     'loginmodule.apps.LoginmoduleConfig',
+    'firstdbtest.apps.FirstdbtestConfig',
 ]
 
 MIDDLEWARE = [
