@@ -1,0 +1,90 @@
+{% load static %}
+{% if messages %}
+{% for message in messages %}
+<script>M.toast({ html: "{{message}}", classes: 'blue rounded', displayLength: 2000 });</script>
+{% endfor %}
+{% endif %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Service Provider | Registration</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="navbar">
+				<div class="logo">
+					<img src="{% static 'images/logo.png' %}" width="125px">
+				</div>
+				<nav>
+					<ul>
+						<li><a href="/loginmodule/home">Home</a></li>
+						<li><a href="/loginmodule/customer">Products</a></li>
+						<li><a href="/loginmodule/about">About</a></li>
+						<li><a href="">Contact</a></li>
+						<li><a href="/loginmodule/login" class="active">Log In</a></li>
+					</ul>
+				</nav>
+				<img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+				<img src="{% static 'images/menu.png' %}" class="menu-icon">
+			</div>
+			<br>
+			<h2 style="text-align: center;" class="title">Register Service Provider</h2>
+			<div class="row">
+				<div class="col-2">
+					<div class="form-box-service" style="height: 1050px;">
+						<div class="button-box">
+							<div id="btn">
+								<a href="/loginmodule/login"><button type="button" class="toggle-btn"><a href="sign in">Sign
+										Up</a></button></a>
+							</div>
+						</div>
+						<!-- <form id="login" class="input-group">
+							<input type="text" class="input-field" placeholder="User Id" required>
+							<input type="email" class="input-field" placeholder="Email Id" required>
+							<input type="password" class="input-field" placeholder="Enter password" required><br><br>
+							<select name="service" id="service">
+								<option value="electrician">Electrician</option>
+								<option value="plumber">Plumber</option>
+								<option value="carpenter">Carpenter</option>
+								<option value="mechanic">Mechanic</option>
+							</select><br>
+							<input type="checkbox" class="check-box"><span>I agree to terms & Conditions</span>
+							<button type="submit" class="submit-btn">Register</button>
+						</form> -->
+
+
+						<!-------Required Form ------>
+						<form action="/registration/SpSignup" method="post" id="login" class="input-group">
+							{% csrf_token %}
+							{% csrf_token %}
+							username : {{form.username}} <br><br>
+							password : {{form.password}} <br><br>
+							FirstName : {{form.first_name}} <br><br>
+							LastName : {{form.last_name}} <br><br>
+							email : {{form.email}} <br><br>
+							Address : {{form.address}} <br><br>
+							Mo. No. : {{form.mobile_no}} <br><br>
+							City : {{form.city}} <br><br>
+							Rate : {{form.service_rate}} <br><br>
+							Catagories : {{form.cat_id}} <br><br>
+							s_license : {{form.s_license}} <br><br>
+							Description : {{form.profile_description}} <br><br>
+							<input type="checkbox" class="check-box"><span>I agree to terms & Conditions</span>
+							<button type="submit" name="submit" class="submit-btn" value="submit">Register</button>
+						</form>
+					</div>
+					<!-- -------temp------------ -->
+				</div>
+				<div class="col-2">
+					<img src="{% static 'images/work.png' %}">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

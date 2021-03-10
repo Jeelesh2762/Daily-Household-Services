@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | Products </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <!-- ----------Navigation Bar------------ -->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/login">Home</a></li>
+                        <li><a href="/loginmodule/customer" class="active">Products</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="/loginmodule/login">Log In</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <!------------ Main Page --------------->
+            <div class="row">
+                <div class="col-2">
+                    <h1>Who We are ???</h1>
+                    <hr><br>
+                    <p>We are here to Provide you a plateform for Expand Your Services incredibally. <br> & Customer
+                        will have a great to find your capability.</p>
+                    <a href="index.html" class="btn">Explore Now &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'images/customer.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------Testimonial---------------- -->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, consequuntur saepe
+                        molestiae
+                        expedita optio porro vel? Laborum obcaecati perferendis, nesciunt, iste possimus cum aut
+                        dicta
+                        recusandae id repellat rerum officia.</p>
+                    <div class=" rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </div>
+                    <img src="{% static 'images/user-1.png' %}">
+                    <h3>Smriti</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, consequuntur saepe
+                        molestiae
+                        expedita optio porro vel? Laborum obcaecati perferendis, nesciunt, iste possimus cum aut
+                        dicta
+                        recusandae id repellat rerum officia.</p>
+                    <div class=" rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <img src="{% static 'images/user-2.png' %}">
+                    <h3>Narendra</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, consequuntur saepe
+                        molestiae
+                        expedita optio porro vel? Laborum obcaecati perferendis, nesciunt, iste possimus cum aut
+                        dicta
+                        recusandae id repellat rerum officia.</p>
+                    <div class=" rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </div>
+                    <img src="{% static 'images/user-3.png' %}">
+                    <h3>Meshwa</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ------------Footer------------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download for Android and ios mobile Phones.</p>
+                    <div class="app-logo">
+                        <img src="{% static 'images/play-store.png' %}">
+                        <img src="{% static 'images/app-store.png' %}">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{% static 'images/valorant-dark-1.png' %}">
+                    <p>Our Purpose Is to Sustainably Make the Pleasure and Benifits of Sports Accessible to the
+                        Many.
+                    </p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <div class="social-media">
+                            <li><img src="{% static 'images/facebook.png' %}"></li>
+                            <li><img src="{% static 'images/twitter.png' %}"></li>
+                            <li><img src="{% static 'images/instagram.png' %}"></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - Valorant.inc</p>
+        </div>
+    </div>
+</body>
+
+</html>
