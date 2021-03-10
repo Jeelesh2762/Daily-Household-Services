@@ -1,3 +1,4 @@
+<!-- This is a Order details form Which Customer should fill during make a Order -->
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -29,25 +30,16 @@
             <br>
             <div class="row">
                 <div class="col-2">
-                    <div class="form-box">
-                        <div class="button-box">
-                            <div id="btn">
-                                <button type="button" class="toggle-btn"><a href="/registration/signup">Sign Up</a></button>
-                            </div>
-                        </div>
-                        <form id="login" class="input-group" action="/loginmodule/auth/" method="post">
-                            {%csrf_token%}
-                            {{msg}}
-                            <input type="text" name="username" class="input-field" placeholder="User Name" required>
-                            <input type="password" name="password" class="input-field" placeholder="Enter password"
-                                required> <br><br>
-                            <select name='user_type'>
-                                <option value="">Select User Type....</option>
-                                <option value="cust">Customer</option>
-                                <option value="sp">Service Provider</option>
-                                <option value="admin">Admin</option>
-                            </select><br><br><br><br>
-                            <button type="submit" class="submit-btn">Log In</button>
+                    <div class="form-box"><br>
+                        <button type="button" class="submit-btn">Add Service Provider</a></button><br>
+                        <hr><br><br>
+                        <form method="POST" action="{{id}}">
+                            {% csrf_token %}
+                            &nbsp;&nbsp;&nbsp;&nbsp;City: <input type="text" name="city" /><br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;mobile_no:<input type="text" name="mobile" /><br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Address:<input type="text" name="address" /><br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Email:<input type="Email" name="email" /><br><br><br><br>
+                            <button class="submit-btn" type="submit">Add</button>
                         </form>
                     </div>
                     <!-- -------temp------------ -->
@@ -58,7 +50,8 @@
                 </div>
             </div>
         </div>
-        <a href="/loginmodule/logout" class="btn" style="margin: 0px 230px; margin-bottom :30px;">Log out &#8594</a>
+        <!-- <a href="/loginmodule/logout" class="btn" style="margin: 0px 230px; margin-bottom :30px;">Log out &#8594</a> -->
+        <a href="/loginmodule/customer" class="btn" style="margin: 0px 230px; margin-bottom :30px;">&#10094; Back </a>
     </div>
 
     <div class="footer">

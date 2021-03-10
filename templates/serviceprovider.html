@@ -1,12 +1,83 @@
+<!-- ----------- Landing Page for a Service Provider --------- -->
+
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>ServiceProvider</title>
+	<meta charset="UTF-8">
+	<title>Valorant | Products </title>
+	<link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
-	<h1>We hope you are gonna like our plateform</h1>
+	<div class="header">
+		<div class="container">
+			<!-- ----------Navigation Bar------------ -->
+			<div class="navbar">
+				<div class="logo">
+					<img src="{% static 'images/logo.png' %}" width="125px">
+				</div>
+				<nav>
+					<ul>
+						<li><a href="/loginmodule/login" class="active">Home</a></li>
+						<li><a href="/loginmodule/customer">Products</a></li>
+						<li><a href="/loginmodule/about">About</a></li>
+						<li><a href="">Contact</a></li>
+						<li><a href="/loginmodule/login">Log In</a></li>
+					</ul>
+				</nav>
+				<img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+				<img src="{% static 'images/menu.png' %}" class="menu-icon">
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<h1>Welcome Service Provider !</h1>
+					<p>It's a Page of Highest Privilages so understand your Responsibility <br> & do your Job
+						<br> As people says Great power comes with a great Responsibility.
+					</p>
+					<a href="/orderservice/show/sp" class="btn">See Order &#8594;</a>
+				</div>
+				<div class="col-2">
+					<img src="{% static 'images/work.png' %}">
+				</div>
+			</div>
+			<hr>
+			<!-- <div class="small-container">
+                <h2 class="title">Manage Catagories</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="/service/add"><img src="{% static 'images/edit_details.png' %}"
+                                style="height: 220px;"></a>
+                        <h4>Edit Record</h4>
+                    </div>
+                    <div class=" col-4">
+                        <a href="/service/show"><img src="{% static 'images/show_details.png' %}"></a>
+                        <h4>Show Record</h4>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="small-container">
+                <h2 class="title">Manage Users</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="/service/add"><img src="{% static 'images/ServiceProvider.png' %}"></a>
+                        <h4>Update Service Provider</h4>
+                    </div>
+                    <div class="col-4">
+                        <a href="/service/show"><img src="{% static 'images/Customer.png' %}"></a>
+                        <h4>Update Customer</h4>
+                    </div>
+                </div>
+            </div> -->
+		</div>
+	</div>
+	<!-- ------------Footer------------- -->
+	<div class="footer">
+		<hr>
+		<p class="copyright">Copyright 2021 - Valorant.inc</p>
+	</div>
 </body>
 
 </html>

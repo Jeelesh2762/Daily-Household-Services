@@ -1,0 +1,146 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | Products </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container"> -->
+<!-- ----------Navigation Bar------------ -->
+<!-- <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/login">Home</a></li>
+                        <li><a href="/loginmodule/customer" class="active">Products</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="/loginmodule/login">Log In</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="row" style="align-items: flex-start;">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Category ID</th>
+                            <th>Category Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    -->
+<!-- {% for service in services %}
+                        <tr class="active-row">
+                            <td>{{ service.id }}</td>
+                            <td>{{ service.Category }}</td>
+                            <td>
+                                <a href="delete/{{ service.id }}">Delete</a>
+                            </td>
+                        </tr>
+                        {% endfor %} -->
+<!-- and so on... -->
+<!-- </tbody> 
+                </table><br>
+                <hr>
+                <hr>
+                <div class="col-2">
+                    <a href="add" class="btn">Add New &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'images/work.png' %}">
+                </div>
+            </div>
+        </div>
+    </div> -->
+<!-- ------------Footer------------- -->
+<!-- <div class="footer">
+        <hr>
+        <p class="copyright">Copyright 2021 - Valorant.inc</p>
+    </div>
+</body>
+
+</html> -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | Household Services</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="" class="active">Home</a></li>
+                        <li><a href="search.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="login.html">Log In</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <!-- <h1>Give Your Service <br> A New Style!</h1>
+                    <p>Success isn't always about greatness.It's about consistency.Consistent <br> hard work gains
+                        success.
+                        Greatness will come.</p>
+                    <a href="" class="btn">Explore Now &#8594;</a> -->
+                    <table class="styled-table" style="margin:auto;">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Category Name</th>
+                                <th>address</th>
+                                <th>Mobile No</th>
+                                <th>email</th>
+                                <th>Service Rate</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for service in services %}
+                            <tr class="active-row">
+                                <td>{{ service.id }}</td>
+                                <td>{{ service.Category }}</td>
+                                <td>
+                                    <a href="delete/{{ service.id }}" class="del">Delete &#127; </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            <!-- and so on... -->
+                        </tbody>
+                    </table>
+                    <a href="/loginmodule/admin" class="btn">Back &#10094; </a>
+                </div>
+                <div class="col-2">
+                    <!-- <img src="{% static 'images/work.png' %}"> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</body>
+
+</html>

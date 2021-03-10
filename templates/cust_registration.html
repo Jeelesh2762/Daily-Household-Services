@@ -33,8 +33,7 @@
 					<div class="form-box-service">
 						<div class="button-box">
 							<div id="btn">
-								<button type="button" class="toggle-btn"><a href="signup">Sign
-										Up</a></button>
+								<button type="button" class="toggle-btn"><a href="signup">Sign In </a></button>
 							</div>
 						</div>
 						<!-- <form id="login" class="input-group">
@@ -56,6 +55,7 @@
 						<form action="/registration/CustomerSignup" method="post" id="login" class="input-group">
 							{% csrf_token %}
 							{% csrf_token %}
+							{{msg}}
 							username : {{form.username}} <br><br>
 							password : {{form.password}} <br><br>
 							email : {{form.email}} <br><br>

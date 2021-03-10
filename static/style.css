@@ -125,6 +125,7 @@ p {
   color: #3b49df;
 }
 
+
 .del {
   display: inline-block;
   background: #e21405;
@@ -135,6 +136,45 @@ p {
   transition: background 0.5s;
 }
 .del:hover {
+  background: #563434;
+}
+
+.add-btn {
+  display: inline-block;
+  background: #00b300;
+  color: #fff;
+  padding: 8px 5px;
+  margin: 5px 0;
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+.add-btn:hover {
+  background: #563434;
+}
+
+.fulfilled {
+  display: inline-block;
+  background: #0c4dff;
+  color: #fff;
+  padding: 8px 5px;
+  margin: 5px 0;
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+.fulfilled:hover {
+  background: #563434;
+}
+
+.invalid {
+  display: inline-block;
+  background: gray;
+  color: #fff;
+  padding: 8px 5px;
+  margin: 5px 0;
+  border-radius: 10px;
+  transition: background 0.5s;
+}
+.invalid:hover {
   background: #563434;
 }
 /* -------------------------- feature Catagories ---------------------- */

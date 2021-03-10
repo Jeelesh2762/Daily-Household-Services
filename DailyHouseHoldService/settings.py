@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#this line is added because of user creation
+# this line is added because of user creation
 #AUTH_USER_MODEL = "registration.SystemUser"
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'loginmodule.apps.LoginmoduleConfig',
     'registration.apps.RegistrationConfig',
     'service.apps.ServiceConfig',
-    
+    'OrderService.apps.OrderserviceConfig',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'DailyHouseHoldService.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,17 +80,17 @@ WSGI_APPLICATION = 'DailyHouseHoldService.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-'default' :{
-'ENGINE' : 'django.db.backends.mysql',
-'NAME' : 'DailyHouseHoldService' , # Name of the database
-'USER': 'root', #user name for the database
-'PASSWORD' : '', # password 
-'HOST' : '127.0.0.1', # IP address of the database
-'PORT' : '3306', # port number of database server
-'OPTIONS' :{
-	'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-	},
-}}
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'DailyHouseHoldService',  # Name of the database
+        'USER': 'root',  # user name for the database
+        'PASSWORD': '',  # password
+        'HOST': '127.0.0.1',  # IP address of the database
+        'PORT': '3306',  # port number of database server
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
+    }}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
