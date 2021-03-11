@@ -1,4 +1,4 @@
-<!-- ---------------------Show All Order Which Customer had made------------------ -->
+<!-- -------Show All Order to Customer Which Customer had made--------- -->
 
 {% load static %}
 <!DOCTYPE html>
@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Valorant | Household Services</title>
+    <title>Valorant | Customer's Orders</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
@@ -19,18 +19,15 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="" class="active">Home</a></li>
-                        <li><a href="search.html">Products</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="/loginmodule/home">Home</a></li>
+                        <li><a href="/loginmodule/customer" class="active">Services</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/loginmodule/login">Log In</a></li>
                     </ul>
                 </nav>
                 <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
                 <img src="{% static 'images/menu.png' %}" class="menu-icon">
             </div>
-            <!-- <div class="row">
-                <div class="col-2"> -->
             <div class="title">List of all Orders</div>
             <table class="styled-table" style="margin: 3% auto;">
                 <thead>
@@ -75,11 +72,11 @@
             </table>
             <a href="/loginmodule/customer" class="btn">&#10094; Back </a>
         </div>
-        <!-- <div class="col-2">
-                    <img src="{% static 'images/work.png' %}">
-                </div> -->
-        <!-- </div>
-        </div> -->
+        <!-- ------------Footer------------- -->
+        <div class="footer">
+            <hr>
+            <p class="copyright">Copyright &#169; 2021 - Valorant.inc</p>
+        </div>
     </div>
 </body>
 </body>

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'registration.apps.RegistrationConfig',
     'service.apps.ServiceConfig',
     'OrderService.apps.OrderserviceConfig',
+    'administration.apps.AdministrationConfig',
 ]
 
 MIDDLEWARE = [

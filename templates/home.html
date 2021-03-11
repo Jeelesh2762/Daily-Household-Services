@@ -1,10 +1,11 @@
+<!-- ---------There is no place Like a Home-------- -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Valorant | Products </title>
+    <title>Valorant | Daily Household Services </title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
@@ -19,9 +20,8 @@
                 <nav>
                     <ul>
                         <li><a href="/loginmodule/home" class="active">Home</a></li>
-                        <li><a href="/loginmodule/customer">Products</a></li>
+                        <li><a href="/loginmodule/customer">Services</a></li>
                         <li><a href="/loginmodule/about">About</a></li>
-                        <li><a href="">Contact</a></li>
                         <li><a href="loginmodule/login">Log In</a></li>
                     </ul>
                 </nav>
@@ -34,7 +34,7 @@
                     <p>Success isn't always about greatness.It's about consistency.Consistent <br> hard work gains
                         success.
                         Greatness will come.</p>
-                    <a href="" class="btn">Explore Now &#8594;</a>
+                    <a href="/loginmodule/customer" class="btn">Explore Now &#8594;</a>
                 </div>
                 <div class="col-2">
                     <img src="{% static 'images/work.png' %}">
@@ -65,19 +65,19 @@
         <h2 class="title">Featured Services</h2><br>
         <div class="row">
             <div class="col-4">
-                <img src="{% static 'images/plumber_service.png' %}">
+                <a href="/orderservice/show_sp/plumbing"><img src="{% static 'images/plumber_service.png' %}"></a>
                 <h4>Plumber</h4>
             </div>
             <div class="col-4">
-                <img src="{% static 'images/electrician_service.png' %}">
+                <a href="/orderservice/show_sp/electrician"><img src="{% static 'images/electrician_service.png' %}"></a>
                 <h4>Electrician</h4>
             </div>
             <div class="col-4">
-                <img src="{% static 'images/Carpenter_service.png' %}">
+                <a href="/orderservice/show_sp/carpentry"><img src="{% static 'images/Carpenter_service.png' %}"></a>
                 <h4>Carpenter</h4>
             </div>
             <div class="col-4">
-                <img src="{% static 'images/mechanic-service.png' %}">
+                <a href="/orderservice/show_sp/mechanic"><img src="{% static 'images/mechanic-service.png' %}"></a>
                 <h4>Mechanic</h4>
             </div>
         </div>
@@ -94,10 +94,8 @@
                 <div class="col-2">
                     <p>Exclusively available on Valorant</p>
                     <h1>Digital Devices repair</h1>
-                    <small>The Mi Smart Band 4 features a 49.9% larger (than Mi Band 3) AMOLED color full-touch
-                        display
-                        with adjustable brightness, so everythig is clear as can be.</small>
-                    <a href="" class="btn">Try Now &#8594</a>
+                    <small>We are Providing you our excellent Service in IT-Repair Field also.so, Let's Explore Service Provider list & make an Order NOW.</small>
+                    <br><br><hr><br><a href="/orderservice/show_sp/it_repair" class="btn">Try Now &#8594</a>
                 </div>
             </div>
         </div>

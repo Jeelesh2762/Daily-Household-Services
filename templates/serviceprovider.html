@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Valorant | Products </title>
+	<title>Valorant | Service Provider </title>
 	<link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
@@ -20,10 +20,9 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="/loginmodule/login" class="active">Home</a></li>
-						<li><a href="/loginmodule/customer">Products</a></li>
+						<li><a href="/loginmodule/serviceprovider" class="active">Home</a></li>
+						<li><a href="/loginmodule/serviceprovider">Services</a></li>
 						<li><a href="/loginmodule/about">About</a></li>
-						<li><a href="">Contact</a></li>
 						<li><a href="/loginmodule/login">Log In</a></li>
 					</ul>
 				</nav>
@@ -33,8 +32,9 @@
 			<div class="row">
 				<div class="col-2">
 					<h1>Welcome Service Provider !</h1>
-					<p>It's a Page of Highest Privilages so understand your Responsibility <br> & do your Job
-						<br> As people says Great power comes with a great Responsibility.
+					<p>It's the page for only Service Provides for manage orders which they get from users <br> & mark
+						them as per Provides Details
+						<br> You can Accept or Cancle Order & after fullfiled users Requirement close the Order.
 					</p>
 					<a href="/orderservice/show/sp" class="btn">See Order &#8594;</a>
 				</div>
@@ -43,40 +43,40 @@
 				</div>
 			</div>
 			<hr>
-			<!-- <div class="small-container">
-                <h2 class="title">Manage Catagories</h2>
-                <div class="row">
-                    <div class="col-4">
-                        <a href="/service/add"><img src="{% static 'images/edit_details.png' %}"
-                                style="height: 220px;"></a>
-                        <h4>Edit Record</h4>
-                    </div>
-                    <div class=" col-4">
-                        <a href="/service/show"><img src="{% static 'images/show_details.png' %}"></a>
-                        <h4>Show Record</h4>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="small-container">
-                <h2 class="title">Manage Users</h2>
-                <div class="row">
-                    <div class="col-4">
-                        <a href="/service/add"><img src="{% static 'images/ServiceProvider.png' %}"></a>
-                        <h4>Update Service Provider</h4>
-                    </div>
-                    <div class="col-4">
-                        <a href="/service/show"><img src="{% static 'images/Customer.png' %}"></a>
-                        <h4>Update Customer</h4>
-                    </div>
-                </div>
-            </div> -->
 		</div>
 	</div>
 	<!-- ------------Footer------------- -->
 	<div class="footer">
-		<hr>
-		<p class="copyright">Copyright 2021 - Valorant.inc</p>
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Download Our App</h3>
+					<p>Download for Android and ios mobile Phones.</p>
+					<div class="app-logo">
+						<img src="{% static 'images/play-store.png' %}">
+						<img src="{% static 'images/app-store.png' %}">
+					</div>
+				</div>
+				<div class="footer-col-2">
+					<img src="{% static 'images/valorant-dark-1.png' %}">
+					<p>Our Purpose Is to Sustainably Make the Pleasure and Benifits of Sports Accessible to the
+						Many.
+					</p>
+				</div>
+				<div class="footer-col-4">
+					<h3>Follow us</h3>
+					<ul>
+						<div class="social-media">
+							<li><img src="{% static 'images/facebook.png' %}"></li>
+							<li><img src="{% static 'images/twitter.png' %}"></li>
+							<li><img src="{% static 'images/instagram.png' %}"></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<p class="copyright">Copyright 2021 - Valorant.inc</p>
+		</div>
 	</div>
 </body>
 

@@ -1,9 +1,10 @@
+<!-- ------Registration Page for a Customer-------- -->
 {% load static %}
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>customer | Registartion</title>
+	<title>customer | Registartion | Customer</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 </head>
 
@@ -17,9 +18,8 @@
 				<nav>
 					<ul>
 						<li><a href="/loginmodule/home">Home</a></li>
-						<li><a href="/loginmodule/customer">Products</a></li>
+						<li><a href="/loginmodule/customer">Services</a></li>
 						<li><a href="/loginmodule/about">About</a></li>
-						<li><a href="">Contact</a></li>
 						<li><a href="/loginmodule/login" class="active">Log In</a></li>
 					</ul>
 				</nav>
@@ -36,22 +36,6 @@
 								<button type="button" class="toggle-btn"><a href="signup">Sign In </a></button>
 							</div>
 						</div>
-						<!-- <form id="login" class="input-group">
-							<input type="text" class="input-field" placeholder="User Id" required>
-							<input type="email" class="input-field" placeholder="Email Id" required>
-							<input type="password" class="input-field" placeholder="Enter password" required><br><br>
-							<select name="service" id="service">
-								<option value="electrician">Electrician</option>
-								<option value="plumber">Plumber</option>
-								<option value="carpenter">Carpenter</option>
-								<option value="mechanic">Mechanic</option>
-							</select><br>
-							<input type="checkbox" class="check-box"><span>I agree to terms & Conditions</span>
-							<button type="submit" class="submit-btn">Register</button>
-						</form> -->
-
-
-						<!-------Required Form ------>
 						<form action="/registration/CustomerSignup" method="post" id="login" class="input-group">
 							{% csrf_token %}
 							{% csrf_token %}
@@ -68,13 +52,17 @@
 							<button type="submit" name="submit" class="submit-btn" value="submit">Register</button>
 						</form>
 					</div>
-					<!-- -------temp------------ -->
 				</div>
 				<div class="col-2">
 					<img src="{% static 'images/customer.png' %}">
 				</div>
 			</div>
 		</div>
+	</div>
+	<!-- ------------Footer------------- -->
+	<div class="footer">
+		<hr>
+		<p class="copyright">Copyright &#169; 2021 - Valorant.inc</p>
 	</div>
 </body>
 

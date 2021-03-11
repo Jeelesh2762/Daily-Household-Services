@@ -1,10 +1,11 @@
+<!-- ------------This Page will Help Admin to ADD service Catagory to Database--------- -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>Valorant | Products </title>
+    <title>Valorant | admin | add Catagory</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
@@ -18,10 +19,9 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="/loginmodule/login">Home</a></li>
-                        <li><a href="/loginmodule/customer" class="active">Products</a></li>
+                        <li><a href="/loginmodule/add">Home</a></li>
+                        <li><a href="/loginmodule/admin" class="active">Service</a></li>
                         <li><a href="/loginmodule/about">About</a></li>
-                        <li><a href="">Contact</a></li>
                         <li><a href="/loginmodule/login">Log In</a></li>
                     </ul>
                 </nav>
@@ -36,7 +36,7 @@
                         Category Name :{{ form.Category}} <br><br>
                         <button type="submit" class="btn">Add &#8594;</button>
                     </form>
-                    <a href="/loginmodule/admin" class="btn">Back &#10094; </a>
+                    <a href="/loginmodule/admin" class="btn">&#10094;Back </a>
                 </div>
 
                 <div class="col-2">
@@ -48,7 +48,7 @@
     <!-- ------------Footer------------- -->
     <div class="footer">
         <hr>
-        <p class="copyright">Copyright 2021 - Valorant.inc</p>
+        <p class="copyright">Copyright 2021 &#169; - Valorant.inc</p>
     </div>
 </body>
 

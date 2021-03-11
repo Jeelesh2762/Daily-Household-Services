@@ -42,7 +42,7 @@ def auth_view(request):
                     user1 = ServiceProvider.objects.get(username=username)
                 except:
                     auth.login(request, user)
-                    msg = "Wrong Username or Password"
+                    msg = "Wrong Username or Password!"
                     return render(request, 'login.html', {'msg': msg})
                 else:
                     auth.login(request, user)
@@ -56,12 +56,12 @@ def auth_view(request):
             return render(request, 'login.html', {'msg': msg})
 
 
-def loggedin(request):
-    return render(None, 'loggedin.html', {"full_name": request.user.username})
+# def loggedin(request):
+#     return render(None, 'loggedin.html', {"full_name": request.user.username})
 
 
-def invalidlogin(request):
-    return render(None, 'invalidlogin.html')
+# def invalidlogin(request):
+#     return render(None, 'invalidlogin.html')
 
 
 def logout(request):
