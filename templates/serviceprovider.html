@@ -21,9 +21,9 @@
 				<nav>
 					<ul>
 						<li><a href="/loginmodule/serviceprovider" class="active">Home</a></li>
-						<li><a href="/loginmodule/serviceprovider">Services</a></li>
+						<li><a href="/orderservice/show/sp">Orders</a></li>
 						<li><a href="/loginmodule/about">About</a></li>
-						<li><a href="/loginmodule/login">Log In</a></li>
+						<li><a href="/loginmodule/logout">Logout</a></li>
 					</ul>
 				</nav>
 				<img src="{% static 'images/cart.png' %}" width="30px" height="30px">
@@ -31,7 +31,7 @@
 			</div>
 			<div class="row">
 				<div class="col-2">
-					<h1>Welcome Service Provider !</h1>
+					<h1>Welcome {{name}} !</h1>
 					<p>It's the page for only Service Provides for manage orders which they get from users <br> & mark
 						them as per Provides Details
 						<br> You can Accept or Cancle Order & after fullfiled users Requirement close the Order.

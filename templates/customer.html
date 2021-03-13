@@ -4,63 +4,102 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Valorant | Customer | Services </title>
-	<link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <title>Valorant | Daily Household Services </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
-	<div class="header">
-		<div class="container">
-			<!-- ----------Navigation Bar------------ -->
-			<div class="navbar">
-				<div class="logo">
-					<img src="{% static 'images/logo.png' %}" width="125px">
-				</div>
-				<nav>
-					<ul>
-						<li><a href="/loginmodule/home">Home</a></li>
-						<li><a href="/loginmodule/customer" class="active">Services</a></li>
-						<li><a href="/loginmodule/about">About</a></li>
-						<li><a href="/loginmodule/login">Log In</a></li>
-					</ul>
-				</nav>
-				<img src="{% static 'images/cart.png' %}" width="30px" height="30px">
-				<img src="{% static 'images/menu.png' %}" class="menu-icon">
-			</div>
-		</div>
-		<!-- -------------- featured Product------------- -->
-		<br>
-		<div class="small-container">
-			<h2 class="title">Featured Services</h2>
-			<div class="row">
-				<div class="col-4">
-					<a href="/orderservice/show_sp/plumbing"><img src="{% static 'images/work1.png' %}"></a>
-					<h4>Plumber</h4>
-				</div>
-				<div class="col-4">
-					<a href="/orderservice/show_sp/electrician"><img
-							src="{% static 'images/electrician_service.png' %}"></a>
-					<h4>Electrician</h4>
-				</div>
-				<div class="col-4">
-					<a href="/orderservice/show_sp/carpentry"><img src="{% static 'images/Carpenter2.png' %}"></a>
-					<h4>Carpenter</h4>
-				</div>
-				<hr>
-				<div class="col-4">
-					<a href="/orderservice/show_sp/it_repair"><img src="{% static 'images/it-repair-person.png' %}"></a>
-					<h4>IT-Repair</h4>
-				</div>
-				<div class="col-4">
-					<a href="/orderservice/show_sp/mechanic"><img src="{% static 'images/mechanic-service.png' %}"></a>
-					<h4>Mechanic</h4>
-				</div>
-			</div>
-		</div>
-		<div class="col-2" style="text-align: center;">
-			<a href="/orderservice/show/cust" class="btn">Show Order &#x21f0;</a>
-		</div>
+    <div class="header">
+        <div class="container">
+            <!-- ----------Navigation Bar------------ -->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/customer" class="active">Home</a></li>
+                        <li><a href="/service/services">Services</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/loginmodule/logout">Logout</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Welcome {{name}}</h1>
+                    <p>Thank you for being our valuable Customer <br> We hope that you like
+                         our Plateform.
+                        We appreciate your Support.</p>
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'images/work.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------- featured catagories ------------- -->
+
+    <div class="catagories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="{% static 'images/repair1.jpeg' %}">
+                </div>
+                <div class="col-3">
+                    <img src="{% static 'images/repair2.jpg' %}">
+                </div>
+                <div class="col-3">
+                    <img src="{% static 'images/repair3.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------- featured Services------------- -->
+    <div class="small-container">
+        <h2 class="title">Featured Services</h2><br>
+        <div class="row">
+            <div class="col-4">
+                <a href="/orderservice/show_sp/plumbing"><img src="{% static 'images/plumber_service.png' %}"></a>
+                <h4>Plumber</h4>
+            </div>
+            <div class="col-4">
+                <a href="/orderservice/show_sp/electrician"><img src="{% static 'images/electrician_service.png' %}"></a>
+                <h4>Electrician</h4>
+            </div>
+            <div class="col-4">
+                <a href="/orderservice/show_sp/carpentry"><img src="{% static 'images/Carpenter_service.png' %}"></a>
+                <h4>Carpenter</h4>
+            </div>
+            <div class="col-4">
+                <a href="/orderservice/show_sp/mechanic"><img src="{% static 'images/mechanic-service.png' %}"></a>
+                <h4>Mechanic</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------- Offer ------------ -->
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <!-- <img src="images/exclusive.png" class="offer-img"> -->
+                    <img src="{% static 'images/it-repair1.png' %}" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>Exclusively available on Valorant</p>
+                    <h1>Digital Devices repair</h1>
+                    <small>We are Providing you our excellent Service in IT-Repair Field also.so, Let's Explore Service Provider list & make an Order NOW.</small>
+                    <br><br><hr><br><a href="/orderservice/show_sp/it_repair" class="btn">Try Now &#8594</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- ------------Footer------------- -->
     <div class="footer">
         <div class="container">

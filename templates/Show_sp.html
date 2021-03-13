@@ -19,10 +19,10 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="/loginmodule/home">Home</a></li>
+                        <li><a href="/loginmodule/customer">Home</a></li>
                         <li><a href="/loginmodule/customer" class="active">Services</a></li>
                         <li><a href="/loginmodule/about">About</a></li>
-                        <li><a href="/loginmodule/login">Log In</a></li>
+                        <li><a href="/loginmodule/logout">Logout</a></li>
                     </ul>
                 </nav>
                 <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
@@ -32,7 +32,7 @@
             <table class="styled-table" style="margin: 3% auto;">
                 <thead>
                     <tr>
-                        <th>sp name</th>
+                        <th>Name</th>
                         <th>mobile_no</th>
                         <th>Address</th>
                         <th>City</th>
@@ -59,7 +59,7 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <a href="/loginmodule/customer" class="btn">Back &#10094; </a>
+            <a href="/service/services" class="btn">Back &#10094; </a>
         </div>
     </div>
     <!-- ------------Footer------------- -->

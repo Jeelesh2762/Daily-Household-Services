@@ -18,10 +18,24 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="/loginmodule/home">Home</a></li>
+                        {% if is_active %}
+                            {% if user_type == 'cust' %}
+                                <li><a href="/loginmodule/customer">Home</a></li>
+                            {% elif user_type == 'sp' %}
+                                <li><a href="/loginmodule/serviceprovider">Home</a></li>
+                            {% else %}
+                                <li><a href="/loginmodule/admin">Home</a></li>
+                            {% endif %}
+                        {% else %}
+                            <li><a href="/loginmodule/home">Home</a></li>
+                        {% endif %}
                         <li><a href="/loginmodule/customer">Services</a></li>
                         <li><a href="/loginmodule/about" class="active">About</a></li>
-                        <li><a href="/loginmodule/login">Log In</a></li>
+                        {% if is_active %}
+                            <li><a href="/loginmodule/logout">Logout</a></li>
+                        {% else %}
+                            <li><a href="/loginmodule/login">Log In</a></li>
+                        {%endif%}
                     </ul>
                 </nav>
                 <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
@@ -34,7 +48,10 @@
                     <hr><br>
                     <p>We are here to Provide you a plateform for Expand Your Services incredibally. <br> & Customer
                         will have a great to find your capability.</p>
-                    <a href="/loginmodule/customer" class="btn">Explore Now &#8594;</a>
+                    {% if is_active %}
+                    {% else %}
+                        <a href="/loginmodule/login" class="btn">Login Now &#8594;</a>
+                    {%endif%}
                 </div>
                 <div class="col-2">
                     <img src="{% static 'images/customer.png' %}">
