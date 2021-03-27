@@ -1,0 +1,61 @@
+<!-- This is a Order details form Which Customer should fill during make a Order -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>valorant | Make Order</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/customer">Home</a></li>
+                        <li><a href="/service/services" class="active">Services</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/loginmodule/logout">Logout</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-box"><br>
+                        <button type="button" class="submit-btn">Add Service Provider</a></button><br>
+                        <hr><br><br>
+                        <form method="POST" action="{{id}}">
+                            {% csrf_token %}
+                            &nbsp;&nbsp;&nbsp;&nbsp;City: <input type="text" name="city" required/><br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;mobile_no:<input type="text" name="mobile" required /><br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Address:<input type="text" name="address" required /><br><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Email:<input type="Email" name="email" required /><br><br><br><br>
+                            <button class="submit-btn" type="submit">Add</button>
+                        </form>
+                    </div>
+                    <!-- -------temp------------ -->
+                </div>
+
+                <div class="col-2">
+                    <img src="{% static 'images/customer.png' %}">
+                </div>
+            </div>
+        </div>
+        <!-- <a href="/loginmodule/logout" class="btn" style="margin: 0px 230px; margin-bottom :30px;">Log out &#8594</a> -->
+        <a href="/service/services" class="btn" style="margin: 0px 230px; margin-bottom :30px;">&#10094; Back </a>
+    </div>
+
+    <div class="footer">
+        <p class="copyright">Copyright 2021 - Valorant.inc</p>
+    </div>
+</body>
+
+</html>

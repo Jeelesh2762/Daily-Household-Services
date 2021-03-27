@@ -1,0 +1,79 @@
+<!-- This page will Show all Orders which customers had made to service provider -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | Household Services</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+
+                        <li><a href="/loginmodule/serviceprovider">Home</a></li>
+                        <li><a href="/orderservice/show/sp" class="active">Orders</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/loginmodule/logout">Logout</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="title">List of all Orders</div>
+            <table class="styled-table" style="margin: 3% auto;">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>City</th>
+                        <th>Mobile_no</th>
+                        <th>Address</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                        {% if order.order_status != 'rejected' %}
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.city }}</td>
+                        <td>{{ order.mobile_no }}</td>
+                        <td>{{order.address}}</td>
+                        <td>{{order.order_status}}</td>
+                        {% if order.order_status == 'requested' %}
+                        <td>
+                            <a href="/orderservice/update_status/{{ order.id }},rejected,sp" class="del">Reject</a>
+                            <a href="/orderservice/update_status/{{ order.id }},accepted,sp" class="add-btn">Accept</a>
+                        </td>
+                        {% else %}
+                        <td>
+                            <a href="/orderservice/update_status/{{ order.id }},done,sp" class="fulfilled">fulfilled</a>
+                        </td>
+                        {% endif %}
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/loginmodule/serviceprovider" class="btn">&#10094; Back </a>
+        </div>
+    </div>
+    <!-- ------------Footer------------- -->
+    <div class="footer">
+        <hr>
+        <p class="copyright">Copyright &#169; 2021 - Valorant.inc</p>
+    </div>
+</body>
+</body>
+
+</html>

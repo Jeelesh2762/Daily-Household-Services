@@ -1,0 +1,83 @@
+<!-- ----------- Landing Page for a Service Provider --------- -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Valorant | Service Provider </title>
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<!-- ----------Navigation Bar------------ -->
+			<div class="navbar">
+				<div class="logo">
+					<img src="{% static 'images/logo.png' %}" width="125px">
+				</div>
+				<nav>
+					<ul>
+						<li><a href="/loginmodule/serviceprovider" class="active">Home</a></li>
+						<li><a href="/orderservice/show/sp">Orders</a></li>
+						<li><a href="/loginmodule/about">About</a></li>
+						<li><a href="/loginmodule/logout">Logout</a></li>
+					</ul>
+				</nav>
+				<img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+				<img src="{% static 'images/menu.png' %}" class="menu-icon">
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<h1>Welcome {{name}} !</h1>
+					<p>It's the page for only Service Provides for manage orders which they get from users <br> & mark
+						them as per Provides Details
+						<br> You can Accept or Cancle Order & after fullfiled users Requirement close the Order.
+					</p>
+					<a href="/orderservice/show/sp" class="btn">See Order &#8594;</a>
+				</div>
+				<div class="col-2">
+					<img src="{% static 'images/work.png' %}">
+				</div>
+			</div>
+			<hr>
+		</div>
+	</div>
+	<!-- ------------Footer------------- -->
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Download Our App</h3>
+					<p>Download for Android and ios mobile Phones.</p>
+					<div class="app-logo">
+						<img src="{% static 'images/play-store.png' %}">
+						<img src="{% static 'images/app-store.png' %}">
+					</div>
+				</div>
+				<div class="footer-col-2">
+					<img src="{% static 'images/valorant-dark-1.png' %}">
+					<p>Our Purpose Is to Sustainably Make the Pleasure and Benifits of Sports Accessible to the
+						Many.
+					</p>
+				</div>
+				<div class="footer-col-4">
+					<h3>Follow us</h3>
+					<ul>
+						<div class="social-media">
+							<li><img src="{% static 'images/facebook.png' %}"></li>
+							<li><img src="{% static 'images/twitter.png' %}"></li>
+							<li><img src="{% static 'images/instagram.png' %}"></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<p class="copyright">Copyright 2021 - Valorant.inc</p>
+		</div>
+	</div>
+</body>
+
+</html>

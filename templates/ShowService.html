@@ -1,0 +1,68 @@
+<!-- ---------------Show Servies to admin--------------- -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | admin | show Services</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/admin">Home</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/loginmodule/logout">Logout</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Category ID</th>
+                                <th>Category Name</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for service in services %}
+                            <tr class="active-row">
+                                <td>{{ service.id }}</td>
+                                <td>{{ service.Category }}</td>
+                                <td>
+                                    <a href="delete/{{ service.id }}" class="del">Delete &#127; </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                            <!-- and so on... -->
+                        </tbody>
+                    </table>
+                    <a href="/loginmodule/admin" class="btn">Back &#10094; </a>
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'images/work.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------Footer------------- -->
+    <div class="footer">
+        <hr>
+        <p class="copyright">Copyright &#169; 2021 - Valorant.inc</p>
+    </div>
+</body>
+</body>
+
+</html>

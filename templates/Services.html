@@ -1,0 +1,99 @@
+<!-- ----------this is a utility page for a Customers------------ -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Valorant | Customer | Services </title>
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<!-- ----------Navigation Bar------------ -->
+			<div class="navbar">
+				<div class="logo">
+					<img src="{% static 'images/logo.png' %}" width="125px">
+				</div>
+				<nav>
+					<ul>
+						<li><a href="/loginmodule/customer">Home</a></li>
+						<li><a href="/service/services" class="active">Services</a></li>
+						<li><a href="/loginmodule/about">About</a></li>
+						<li><a href="/loginmodule/logout">Logout</a></li>
+					</ul>
+				</nav>
+				<img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+				<img src="{% static 'images/menu.png' %}" class="menu-icon">
+			</div>
+		</div>
+		<!-- -------------- featured Product------------- -->
+		<br>
+		<div class="small-container">
+			<h2 class="title">Featured Services</h2>
+			<div class="row">
+				<div class="col-4">
+					<a href="/orderservice/show_sp/plumbing"><img src="{% static 'images/work1.png' %}"></a>
+					<h4>Plumber</h4>
+				</div>
+				<div class="col-4">
+					<a href="/orderservice/show_sp/electrician"><img
+							src="{% static 'images/electrician_service.png' %}"></a>
+					<h4>Electrician</h4>
+				</div>
+				<div class="col-4">
+					<a href="/orderservice/show_sp/carpentry"><img src="{% static 'images/Carpenter2.png' %}"></a>
+					<h4>Carpenter</h4>
+				</div>
+				<hr>
+				<div class="col-4">
+					<a href="/orderservice/show_sp/it_repair"><img src="{% static 'images/it-repair-person.png' %}"></a>
+					<h4>IT-Repair</h4>
+				</div>
+				<div class="col-4">
+					<a href="/orderservice/show_sp/mechanic"><img src="{% static 'images/mechanic-service.png' %}"></a>
+					<h4>Mechanic</h4>
+				</div>
+			</div>
+		</div>
+		<div class="col-2" style="text-align: center;">
+			<a href="/orderservice/show/cust" class="btn">Show Order &#x21f0;</a>
+		</div>
+    <!-- ------------Footer------------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download for Android and ios mobile Phones.</p>
+                    <div class="app-logo">
+                        <img src="{% static 'images/play-store.png' %}">
+                        <img src="{% static 'images/app-store.png' %}">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{% static 'images/valorant-dark-1.png' %}">
+                    <p>Our Purpose Is to Sustainably Make the Pleasure and Benifits of Sports Accessible to the
+                        Many.
+                    </p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <div class="social-media">
+                            <li><img src="{% static 'images/facebook.png' %}"></li>
+                            <li><img src="{% static 'images/twitter.png' %}"></li>
+                            <li><img src="{% static 'images/instagram.png' %}"></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - Valorant.inc</p>
+        </div>
+    </div>
+</body>
+
+</html>

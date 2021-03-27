@@ -1,0 +1,73 @@
+<!-- -----------------------Show all Service Provider of selected catagory to Customer------------------ -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | customer | Show Service Provider</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/customer">Home</a></li>
+                        <li><a href="/loginmodule/customer" class="active">Services</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/loginmodule/logout">Logout</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="title">Service Providers</div>
+            <table class="styled-table" style="margin: 3% auto;">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>mobile_no</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>Email</th>
+                        <th>Service Rate</th>
+                        <th>Profile Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for sp in sps %}
+                    <tr>
+                        <td>{{ sp.first_name}} {{sp.last_name}}</td>
+                        <td>{{ sp.mobile_no }}</td>
+                        <td>{{ sp.address }}</td>
+                        <td>{{ sp.city }}</td>
+                        <td>{{ sp.email }}</td>
+                        <td>{{ sp.service_rate }}</td>
+                        <td>{{ sp.profile_description }}</td>
+                        <td>
+                            <a href="/orderservice/add/{{sp.username}}" class="add-btn">Order</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/service/services" class="btn">Back &#10094; </a>
+        </div>
+    </div>
+    <!-- ------------Footer------------- -->
+    <div class="footer">
+        <hr>
+        <p class="copyright">Copyright &#169; 2021 - Valorant.inc</p>
+    </div>
+</body>
+</body>
+
+</html>
