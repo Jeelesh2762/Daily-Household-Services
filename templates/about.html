@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | About </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <!-- ----------Navigation Bar------------ -->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        {% if is_active %}
+                            {% if user_type == 'cust' %}
+                                <li><a href="/loginmodule/customer">Home</a></li>
+                            {% elif user_type == 'sp' %}
+                                <li><a href="/loginmodule/serviceprovider">Home</a></li>
+                            {% else %}
+                                <li><a href="/loginmodule/admin">Home</a></li>
+                            {% endif %}
+                        {% else %}
+                            <li><a href="/loginmodule/home">Home</a></li>
+                        {% endif %}
+                        <li><a href="/loginmodule/customer">Services</a></li>
+                        <li><a href="/loginmodule/about" class="active">About</a></li>
+                        {% if is_active %}
+                            <li><a href="/loginmodule/logout">Logout</a></li>
+                        {% else %}
+                            <li><a href="/loginmodule/login">Log In</a></li>
+                        {%endif%}
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <!------------ Main Page --------------->
+            <div class="row">
+                <div class="col-2">
+                    <h1>Who We are ???</h1>
+                    <hr><br>
+                    <p>We are here to Provide you a plateform for Expand Your Services incredibally. <br> & Customer
+                        will have a great to find your capability.</p>
+                    {% if is_active %}
+                    {% else %}
+                        <a href="/loginmodule/login" class="btn">Login Now &#8594;</a>
+                    {%endif%}
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'images/customer.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------Testimonial---------------- -->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, consequuntur saepe
+                        molestiae
+                        expedita optio porro vel? Laborum obcaecati perferendis, nesciunt, iste possimus cum aut
+                        dicta
+                        recusandae id repellat rerum officia.</p>
+                    <div class=" rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </div>
+                    <img src="{% static 'images/user-1.png' %}">
+                    <h3>Smriti</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, consequuntur saepe
+                        molestiae
+                        expedita optio porro vel? Laborum obcaecati perferendis, nesciunt, iste possimus cum aut
+                        dicta
+                        recusandae id repellat rerum officia.</p>
+                    <div class=" rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <img src="{% static 'images/user-2.png' %}">
+                    <h3>Narendra</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, consequuntur saepe
+                        molestiae
+                        expedita optio porro vel? Laborum obcaecati perferendis, nesciunt, iste possimus cum aut
+                        dicta
+                        recusandae id repellat rerum officia.</p>
+                    <div class=" rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </div>
+                    <img src="{% static 'images/user-3.png' %}">
+                    <h3>Meshwa</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ------------Footer------------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download for Android and ios mobile Phones.</p>
+                    <div class="app-logo">
+                        <img src="{% static 'images/play-store.png' %}">
+                        <img src="{% static 'images/app-store.png' %}">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{% static 'images/valorant-dark-1.png' %}">
+                    <p>Our Purpose Is to Sustainably Make the Pleasure and Benifits of Daily Household Services Accessible to the
+                        Many.
+                    </p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <div class="social-media">
+                            <li><a href="www.facebook.com"><img src="{% static 'images/facebook.png' %}"></a></li>
+                            <li><a href="www.twitter.com"><img src="{% static 'images/twitter.png' %}"></a></li>
+                            <li><a href="www.instagram.com"><img src="{% static 'images/instagram.png' %}"></a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright &#169; 2021 - Valorant.inc</p>
+        </div>
+    </div>
+</body>
+
+</html>

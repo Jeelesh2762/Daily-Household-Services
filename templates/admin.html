@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | Admin </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <!-- ----------Navigation Bar------------ -->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/admin" class="active">Home</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/loginmodule/logout">Logout</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>Welcome Admin !</h1>
+                    <p>It's a Page of Highest Privilages so understand your Responsibility <br> & do your Job
+                        <br> As people says Great power comes with a great Responsibility.
+                    </p>
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'images/admin.png' %}">
+                </div>
+            </div>
+            <hr>
+            <div class="small-container">
+                <h2 class="title">Manage Catagories</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="/service/add"><img src="{% static 'images/edit_details.png' %}"
+                                style="height: 220px;"></a>
+                        <h4>Add Record</h4>
+                    </div>
+                    <div class=" col-4">
+                        <a href="/service/show"><img src="{% static 'images/show_details.png' %}"></a>
+                        <h4>Show Record</h4>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="small-container">
+                <h2 class="title">Manage Users</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <a href="/administration/show/sp"><img src="{% static 'images/ServiceProvider.png' %}"></a>
+                        <h4>Remove Service Provider</h4>
+                    </div>
+                    <div class="col-4">
+                        <a href="/administration/show/cust"><img src="{% static 'images/Customer.png' %}"></a>
+                        <h4>Remove Customer</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------Footer------------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download for Android and ios mobile Phones.</p>
+                    <div class="app-logo">
+                        <img src="{% static 'images/play-store.png' %}">
+                        <img src="{% static 'images/app-store.png' %}">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="{% static 'images/valorant-dark-1.png' %}">
+                    <p>Our Purpose Is to Sustainably Make the Pleasure and Benifits of Sports Accessible to the
+                        Many.
+                    </p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <div class="social-media">
+                            <li><img src="{% static 'images/facebook.png' %}"></li>
+                            <li><img src="{% static 'images/twitter.png' %}"></li>
+                            <li><img src="{% static 'images/instagram.png' %}"></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - Valorant.inc</p>
+        </div>
+    </div>
+</body>
+
+</html>

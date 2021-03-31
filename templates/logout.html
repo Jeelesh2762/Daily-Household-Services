@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | Log Out </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <!-- ----------Navigation Bar------------ -->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/home">Home</a></li>
+                        <li><a href="/loginmodule/customer">Services</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="loginmodule/login" class="active">Log Out</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <h1>You are Successfully<br> Logged out</h1>
+                    Click here to <a href="/loginmodule/login/" class="btn"> Login &#8594;</a>
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'images/work.png' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------Footer------------- -->
+    <div class="footer">
+        <hr>
+        <p class="copyright">Copyright &#169; 2021 - Valorant.inc</p>
+    </div>
+</body>
+
+</html>

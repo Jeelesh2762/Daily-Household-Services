@@ -1,0 +1,79 @@
+<!-- This page will Show all Servvice Provider details to admin -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | admin | show Service Provider</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/admin">Home</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/loginmodule/logout">Logout</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="title">List of all Service Provider</div>
+            <table class="styled-table" style="margin: 3% auto;">
+                <thead>
+                    <tr>
+                        <th>WID</th>
+                        <th>Username</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Address</th>
+                        <th>Mobile No</th>
+                        <th>Email</th>
+                        <th>Service Rate</th>
+                        <th>Service License</th>
+                        <th>Profile Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ServiceProvider in sps %}
+                    <tr>
+                        <td>{{ServiceProvider.id}}</td>
+                        <td>{{ServiceProvider.username}}</td>
+                        <td>{{ServiceProvider.first_name}} {{ServiceProvider.last_name}}</td>
+                        <td>{{ServiceProvider.city}}</td>
+                        <td>{{ServiceProvider.address}}</td>
+                        <td>{{ServiceProvider.mobile_no}}</td>
+                        <td>{{ServiceProvider.email}}</td>
+                        <td>{{ServiceProvider.service_rate}}</td>
+                        <td>{{ServiceProvider.s_license}}</td>
+                        <td>{{ServiceProvider.profile_description}}</td>
+                        <td>
+                            <a href="/administration/delete/{{ServiceProvider.user_type}},{{ServiceProvider.username}}"
+                                class="del">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/loginmodule/admin" class="btn">&#10094; Back </a>
+        </div>
+    </div>
+    <!-- ------------Footer------------- -->
+    <div class="footer">
+        <hr>
+        <p class="copyright">Copyright &#169; 2021 - Valorant.inc</p>
+    </div>
+</body>
+</body>
+
+</html>

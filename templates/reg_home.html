@@ -1,0 +1,52 @@
+<!-- ----------Choose option page for Register a User--------- -->
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <title>Valorant | Who Are You?</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/home">Home</a></li>
+                        <li><a href="/service/services">Services</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/registration/signup" class="active">Sign Up</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <!-- -------------- choose Role------------- -->
+
+            <h2 class="title">Register for Role</h2><br>
+            <div class="row">
+                <div class="col-4-reg">
+                    <a href="/registration/SpSignup"><img src="{% static 'images/work.png' %}"></a><br><br>
+                    <hr><br>
+                    <h4>Service Provider</h4>
+                </div>
+                <div class="col-4-reg">
+                    <a href="/registration/CustomerSignup"><img src="{% static 'images/customer.png' %}"></a><br><br>
+                    <hr><br>
+                    <h4>Customer</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------F00ter----------- -->
+    <div class="footer">
+        <p class="copyright">Copyright 2021 - Valorant.inc</p>
+    </div>
+</body>
+
+</html>

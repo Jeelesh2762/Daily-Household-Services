@@ -1,0 +1,84 @@
+<!-- -------Show All Order to Customer Which Customer had made--------- -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valorant | Customer's Orders</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{% static 'images/logo.png' %}" width="125px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/loginmodule/customer">Home</a></li>
+                        <li><a href="/service/services" class="active">Services</a></li>
+                        <li><a href="/loginmodule/about">About</a></li>
+                        <li><a href="/loginmodule/logout">Logout</a></li>
+                    </ul>
+                </nav>
+                <img src="{% static 'images/cart.png' %}" width="30px" height="30px">
+                <img src="{% static 'images/menu.png' %}" class="menu-icon">
+            </div>
+            <div class="title">List of all Orders</div>
+            <table class="styled-table" style="margin: 3% auto;">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>City</th>
+                        <th>Mobile_no</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.city }}</td>
+                        <td>{{ order.mobile_no }}</td>
+                        <td>{{order.address}}</td>
+                        <td>{{order.email}}</td>
+                        <td>
+                            {% if order.order_status == 'requested' %}
+                            <div class="fulfilled">{{order.order_status}}</div>
+                            {% else %}
+                            <div class="add-btn">{{order.order_status}}</div>
+                            {% endif %}
+                        </td>
+
+                        {% if order.order_status == 'accepted' %}
+                        <td>
+                            <div class="invalid">No-action</div>
+                        </td>
+                        {% else %}
+                        <td>
+                            <a href="/orderservice/delete/{{ order.id }}" class="del">Cancel</a>
+                        </td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="/loginmodule/customer" class="btn">&#10094; Back </a>
+        </div>
+        <!-- ------------Footer------------- -->
+        <div class="footer">
+            <hr>
+            <p class="copyright">Copyright &#169; 2021 - Valorant.inc</p>
+        </div>
+    </div>
+</body>
+</body>
+
+</html>
