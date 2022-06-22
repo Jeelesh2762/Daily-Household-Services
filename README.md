@@ -1,6 +1,6 @@
 # 🖐 Daily Household Services 👨‍🔧
 
-Simple & elegent plateform for managing Daily Household Services repair management.
+Simple & elegant plateform for managing Daily Household Services repair management.
 
 ## Table of contents
 
